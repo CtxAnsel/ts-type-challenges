@@ -19,7 +19,7 @@ type ExpandRecursive<T> = IsUnion<T> extends true
   ? TupleToUnion2<UnionToTuple<T>>
   : T extends object
   ? T extends infer O
-    ? { [P in keyof O]: ExpandRecursive<O[P]> }
+    ? { [P in keyof O]: O[P] extends Function ? O[P] : ExpandRecursive<O[P]> }
     : never
   : T;
 
