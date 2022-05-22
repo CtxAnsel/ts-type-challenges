@@ -1,7 +1,5 @@
 type TT<K1, K2> = K1 extends K2
-  ? K2 extends K1
-    ? never
-    : K1
+  ? never
   : K2 extends K1
   ? never
   : K1;

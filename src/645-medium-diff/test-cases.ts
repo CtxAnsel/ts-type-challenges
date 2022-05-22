@@ -14,17 +14,17 @@ type Coo = {
   gender: number
 }
 
-type TT<K1, K2> = K1 extends K2 ? K2 extends K1 ? never : K1 : K2 extends K1 ? never : K1
+// type TT<K1, K2> = K1 extends K2 ? never : K2 extends K1 ? never : K1
 
-type res = keyof (Foo | Coo);
+// type res = keyof (Foo | Coo);
 
-type res1 = keyof (Foo & Coo);
+// type res1 = keyof (Foo & Coo);
 
-type result = TT<res1, res>;
+// type result = TT<res1, res>;
 
-type res2 = keyof Foo | keyof Coo;
+// type res2 = keyof Foo | keyof Coo;
 
-type res3 = keyof Foo & keyof Coo;
+// type res3 = keyof Foo & keyof Coo;
 
 
 type cases = [
