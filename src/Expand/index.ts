@@ -1,5 +1,5 @@
 // 判断是否是联合类型
-type IsUnion<T, U = T> = T extends U ? ([U] extends [T] ? false : true) : never;
+export type IsUnion<T, U = T> = T extends U ? ([U] extends [T] ? false : true) : never;
 
 type TupleToUnion2<T extends any[]> = T[number];
 
